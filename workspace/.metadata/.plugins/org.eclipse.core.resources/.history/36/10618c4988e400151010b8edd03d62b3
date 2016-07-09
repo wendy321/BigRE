@@ -1,0 +1,305 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BpmnPackage;
+import bpmn.BusinessConcepts;
+
+import bpmn.Contribution;
+import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Business Concepts</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.BusinessConceptsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link bpmn.impl.BusinessConceptsImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link bpmn.impl.BusinessConceptsImpl#getChild <em>Child</em>}</li>
+ *   <li>{@link bpmn.impl.BusinessConceptsImpl#getNewEReference <em>New EReference</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class BusinessConceptsImpl extends MinimalEObjectImpl.Container implements BusinessConcepts {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BusinessConcepts> parent;
+	/**
+	 * The cached value of the '{@link #getChild() <em>Child</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChild()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BusinessConcepts> child;
+	/**
+	 * The cached value of the '{@link #getNewEReference() <em>New EReference</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNewEReference()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Contribution> newEReference;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BusinessConceptsImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.BUSINESS_CONCEPTS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.BUSINESS_CONCEPTS__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BusinessConcepts> getParent() {
+		if (parent == null) {
+			parent = new EObjectWithInverseResolvingEList.ManyInverse<BusinessConcepts>(BusinessConcepts.class, this, BpmnPackage.BUSINESS_CONCEPTS__PARENT, BpmnPackage.BUSINESS_CONCEPTS__CHILD);
+		}
+		return parent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BusinessConcepts> getChild() {
+		if (child == null) {
+			child = new EObjectWithInverseResolvingEList.ManyInverse<BusinessConcepts>(BusinessConcepts.class, this, BpmnPackage.BUSINESS_CONCEPTS__CHILD, BpmnPackage.BUSINESS_CONCEPTS__PARENT);
+		}
+		return child;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Contribution> getNewEReference() {
+		if (newEReference == null) {
+			newEReference = new EObjectContainmentEList<Contribution>(Contribution.class, this, BpmnPackage.BUSINESS_CONCEPTS__NEW_EREFERENCE);
+		}
+		return newEReference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.BUSINESS_CONCEPTS__PARENT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParent()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.BUSINESS_CONCEPTS__CHILD:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChild()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.BUSINESS_CONCEPTS__PARENT:
+				return ((InternalEList<?>)getParent()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.BUSINESS_CONCEPTS__CHILD:
+				return ((InternalEList<?>)getChild()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.BUSINESS_CONCEPTS__NEW_EREFERENCE:
+				return ((InternalEList<?>)getNewEReference()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.BUSINESS_CONCEPTS__NAME:
+				return getName();
+			case BpmnPackage.BUSINESS_CONCEPTS__PARENT:
+				return getParent();
+			case BpmnPackage.BUSINESS_CONCEPTS__CHILD:
+				return getChild();
+			case BpmnPackage.BUSINESS_CONCEPTS__NEW_EREFERENCE:
+				return getNewEReference();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.BUSINESS_CONCEPTS__NAME:
+				setName((String)newValue);
+				return;
+			case BpmnPackage.BUSINESS_CONCEPTS__PARENT:
+				getParent().clear();
+				getParent().addAll((Collection<? extends BusinessConcepts>)newValue);
+				return;
+			case BpmnPackage.BUSINESS_CONCEPTS__CHILD:
+				getChild().clear();
+				getChild().addAll((Collection<? extends BusinessConcepts>)newValue);
+				return;
+			case BpmnPackage.BUSINESS_CONCEPTS__NEW_EREFERENCE:
+				getNewEReference().clear();
+				getNewEReference().addAll((Collection<? extends Contribution>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.BUSINESS_CONCEPTS__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case BpmnPackage.BUSINESS_CONCEPTS__PARENT:
+				getParent().clear();
+				return;
+			case BpmnPackage.BUSINESS_CONCEPTS__CHILD:
+				getChild().clear();
+				return;
+			case BpmnPackage.BUSINESS_CONCEPTS__NEW_EREFERENCE:
+				getNewEReference().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.BUSINESS_CONCEPTS__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case BpmnPackage.BUSINESS_CONCEPTS__PARENT:
+				return parent != null && !parent.isEmpty();
+			case BpmnPackage.BUSINESS_CONCEPTS__CHILD:
+				return child != null && !child.isEmpty();
+			case BpmnPackage.BUSINESS_CONCEPTS__NEW_EREFERENCE:
+				return newEReference != null && !newEReference.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //BusinessConceptsImpl

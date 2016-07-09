@@ -1,0 +1,17 @@
+/**
+ */
+package bpmn;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Operationalizing Softgoal</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see bpmn.BpmnPackage#getOperationalizingSoftgoal()
+ * @model
+ * @generated
+ */
+public interface OperationalizingSoftgoal extends SoftGoal {
+} // OperationalizingSoftgoal

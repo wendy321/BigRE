@@ -1,0 +1,283 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BpmnPackage;
+import bpmn.Contribution;
+import bpmn.Goal;
+import bpmn.PhenomenonType;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Contribution</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.ContributionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link bpmn.impl.ContributionImpl#getTargetPhenomenonType <em>Target Phenomenon Type</em>}</li>
+ *   <li>{@link bpmn.impl.ContributionImpl#getTargetGoal <em>Target Goal</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class ContributionImpl extends MinimalEObjectImpl.Container implements Contribution {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTargetPhenomenonType() <em>Target Phenomenon Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTargetPhenomenonType()
+	 * @generated
+	 * @ordered
+	 */
+	protected PhenomenonType targetPhenomenonType;
+
+	/**
+	 * The cached value of the '{@link #getTargetGoal() <em>Target Goal</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTargetGoal()
+	 * @generated
+	 * @ordered
+	 */
+	protected Goal targetGoal;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContributionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.CONTRIBUTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CONTRIBUTION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PhenomenonType getTargetPhenomenonType() {
+		if (targetPhenomenonType != null && targetPhenomenonType.eIsProxy()) {
+			InternalEObject oldTargetPhenomenonType = (InternalEObject)targetPhenomenonType;
+			targetPhenomenonType = (PhenomenonType)eResolveProxy(oldTargetPhenomenonType);
+			if (targetPhenomenonType != oldTargetPhenomenonType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnPackage.CONTRIBUTION__TARGET_PHENOMENON_TYPE, oldTargetPhenomenonType, targetPhenomenonType));
+			}
+		}
+		return targetPhenomenonType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PhenomenonType basicGetTargetPhenomenonType() {
+		return targetPhenomenonType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTargetPhenomenonType(PhenomenonType newTargetPhenomenonType) {
+		PhenomenonType oldTargetPhenomenonType = targetPhenomenonType;
+		targetPhenomenonType = newTargetPhenomenonType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CONTRIBUTION__TARGET_PHENOMENON_TYPE, oldTargetPhenomenonType, targetPhenomenonType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Goal getTargetGoal() {
+		if (targetGoal != null && targetGoal.eIsProxy()) {
+			InternalEObject oldTargetGoal = (InternalEObject)targetGoal;
+			targetGoal = (Goal)eResolveProxy(oldTargetGoal);
+			if (targetGoal != oldTargetGoal) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnPackage.CONTRIBUTION__TARGET_GOAL, oldTargetGoal, targetGoal));
+			}
+		}
+		return targetGoal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Goal basicGetTargetGoal() {
+		return targetGoal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTargetGoal(Goal newTargetGoal) {
+		Goal oldTargetGoal = targetGoal;
+		targetGoal = newTargetGoal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.CONTRIBUTION__TARGET_GOAL, oldTargetGoal, targetGoal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.CONTRIBUTION__NAME:
+				return getName();
+			case BpmnPackage.CONTRIBUTION__TARGET_PHENOMENON_TYPE:
+				if (resolve) return getTargetPhenomenonType();
+				return basicGetTargetPhenomenonType();
+			case BpmnPackage.CONTRIBUTION__TARGET_GOAL:
+				if (resolve) return getTargetGoal();
+				return basicGetTargetGoal();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.CONTRIBUTION__NAME:
+				setName((String)newValue);
+				return;
+			case BpmnPackage.CONTRIBUTION__TARGET_PHENOMENON_TYPE:
+				setTargetPhenomenonType((PhenomenonType)newValue);
+				return;
+			case BpmnPackage.CONTRIBUTION__TARGET_GOAL:
+				setTargetGoal((Goal)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.CONTRIBUTION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case BpmnPackage.CONTRIBUTION__TARGET_PHENOMENON_TYPE:
+				setTargetPhenomenonType((PhenomenonType)null);
+				return;
+			case BpmnPackage.CONTRIBUTION__TARGET_GOAL:
+				setTargetGoal((Goal)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.CONTRIBUTION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case BpmnPackage.CONTRIBUTION__TARGET_PHENOMENON_TYPE:
+				return targetPhenomenonType != null;
+			case BpmnPackage.CONTRIBUTION__TARGET_GOAL:
+				return targetGoal != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ContributionImpl

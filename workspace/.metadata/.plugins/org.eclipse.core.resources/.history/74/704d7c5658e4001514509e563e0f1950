@@ -1,0 +1,235 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BpmnPackage;
+import bpmn.ConnectingObject;
+import bpmn.FlowObject;
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Flow Object</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.FlowObjectImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link bpmn.impl.FlowObjectImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link bpmn.impl.FlowObjectImpl#getSequenceFlows <em>Sequence Flows</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class FlowObjectImpl extends GraphcialObjectImpl implements FlowObject {
+	/**
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FlowObject> source;
+
+	/**
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FlowObject> target;
+
+	/**
+	 * The cached value of the '{@link #getSequenceFlows() <em>Sequence Flows</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSequenceFlows()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ConnectingObject> sequenceFlows;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FlowObjectImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.FLOW_OBJECT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<FlowObject> getSource() {
+		if (source == null) {
+			source = new EObjectWithInverseResolvingEList.ManyInverse<FlowObject>(FlowObject.class, this, BpmnPackage.FLOW_OBJECT__SOURCE, BpmnPackage.FLOW_OBJECT__TARGET);
+		}
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<FlowObject> getTarget() {
+		if (target == null) {
+			target = new EObjectWithInverseResolvingEList.ManyInverse<FlowObject>(FlowObject.class, this, BpmnPackage.FLOW_OBJECT__TARGET, BpmnPackage.FLOW_OBJECT__SOURCE);
+		}
+		return target;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ConnectingObject> getSequenceFlows() {
+		if (sequenceFlows == null) {
+			sequenceFlows = new EObjectContainmentEList<ConnectingObject>(ConnectingObject.class, this, BpmnPackage.FLOW_OBJECT__SEQUENCE_FLOWS);
+		}
+		return sequenceFlows;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.FLOW_OBJECT__SOURCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSource()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.FLOW_OBJECT__TARGET:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTarget()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.FLOW_OBJECT__SOURCE:
+				return ((InternalEList<?>)getSource()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.FLOW_OBJECT__TARGET:
+				return ((InternalEList<?>)getTarget()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.FLOW_OBJECT__SEQUENCE_FLOWS:
+				return ((InternalEList<?>)getSequenceFlows()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.FLOW_OBJECT__SOURCE:
+				return getSource();
+			case BpmnPackage.FLOW_OBJECT__TARGET:
+				return getTarget();
+			case BpmnPackage.FLOW_OBJECT__SEQUENCE_FLOWS:
+				return getSequenceFlows();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.FLOW_OBJECT__SOURCE:
+				getSource().clear();
+				getSource().addAll((Collection<? extends FlowObject>)newValue);
+				return;
+			case BpmnPackage.FLOW_OBJECT__TARGET:
+				getTarget().clear();
+				getTarget().addAll((Collection<? extends FlowObject>)newValue);
+				return;
+			case BpmnPackage.FLOW_OBJECT__SEQUENCE_FLOWS:
+				getSequenceFlows().clear();
+				getSequenceFlows().addAll((Collection<? extends ConnectingObject>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.FLOW_OBJECT__SOURCE:
+				getSource().clear();
+				return;
+			case BpmnPackage.FLOW_OBJECT__TARGET:
+				getTarget().clear();
+				return;
+			case BpmnPackage.FLOW_OBJECT__SEQUENCE_FLOWS:
+				getSequenceFlows().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.FLOW_OBJECT__SOURCE:
+				return source != null && !source.isEmpty();
+			case BpmnPackage.FLOW_OBJECT__TARGET:
+				return target != null && !target.isEmpty();
+			case BpmnPackage.FLOW_OBJECT__SEQUENCE_FLOWS:
+				return sequenceFlows != null && !sequenceFlows.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //FlowObjectImpl

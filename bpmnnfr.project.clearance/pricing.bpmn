@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BPMNRootElement xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.example.org/bpmn">
+  <BPMNReference xsi:type="bpmn:Pool" type="//@businessConceptEReference.4 //@businessConceptEReference.5 //@businessConceptEReference.8" name="Clearance Pricing Decision">
+    <containLane name="Pricing Comittee">
+      <localBusinessConcept xsi:type="bpmn:UndesirableSituation" name="Low Hit Rate [Predict Demand Manually]" child="//@BPMNReference.0/@containLane.0/@localBusinessConcept.1 //@BPMNReference.0/@containLane.0/@localBusinessConcept.2" topic="//@BPMNReference.0/@containLane.0/@graphicObj.2">
+        <contribTypeToParents xsi:type="bpmn:Make" name="make" targetBusinessConcept="//@businessConceptEReference.4"/>
+      </localBusinessConcept>
+      <localBusinessConcept xsi:type="bpmn:BigQuery" name="BQ1: Truness+Precisionn" parent="//@BPMNReference.0/@containLane.0/@localBusinessConcept.0">
+        <contribTypeToParents xsi:type="bpmn:Make" name="make" targetBusinessConcept="//@BPMNReference.0/@containLane.0/@localBusinessConcept.0"/>
+      </localBusinessConcept>
+      <localBusinessConcept xsi:type="bpmn:BigQuery" name="BQ2: Truness" parent="//@BPMNReference.0/@containLane.0/@localBusinessConcept.0">
+        <contribTypeToParents xsi:type="bpmn:Break" name="break" targetBusinessConcept="//@BPMNReference.0/@containLane.0/@localBusinessConcept.0"/>
+      </localBusinessConcept>
+      <graphicObj xsi:type="bpmn:StartEvent">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNReference.0/@containLane.0/@graphicObj.2"/>
+      </graphicObj>
+      <graphicObj xsi:type="bpmn:EndEvent"/>
+      <graphicObj xsi:type="bpmn:Task" type="//@BPMNReference.0/@containLane.0/@localBusinessConcept.0" name="Predict Demand Manually">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNReference.0/@containLane.0/@graphicObj.3"/>
+        <sequenceFlows xsi:type="bpmn:DataAssociation" name="" dataAssociateObject="//@BPMNReference.0/@containLane.0/@graphicObj.6"/>
+      </graphicObj>
+      <graphicObj xsi:type="bpmn:Task" name="Determine Category Markdown Maually">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNReference.0/@containLane.0/@graphicObj.4"/>
+        <sequenceFlows xsi:type="bpmn:DataAssociation" dataAssociateObject="//@BPMNReference.0/@containLane.0/@graphicObj.6"/>
+        <sequenceFlows xsi:type="bpmn:DataAssociation" dataAssociateObject="//@BPMNReference.0/@containLane.0/@graphicObj.7"/>
+      </graphicObj>
+      <graphicObj xsi:type="bpmn:Task" name="Traspose Decisions">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNReference.0/@containLane.1/@graphicObj.0"/>
+      </graphicObj>
+      <graphicObj xsi:type="bpmn:Task" name="Finalize">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNReference.0/@containLane.0/@graphicObj.1"/>
+      </graphicObj>
+      <graphicObj xsi:type="bpmn:DataInput" name="Regular Season Sales Report"/>
+      <graphicObj xsi:type="bpmn:DataInput" name="Markdown Table"/>
+    </containLane>
+    <containLane name="Country Manager">
+      <graphicObj xsi:type="bpmn:Task" name="Modify Initial Decision Manully">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNReference.0/@containLane.0/@graphicObj.5"/>
+      </graphicObj>
+    </containLane>
+  </BPMNReference>
+  <BPMNReference xsi:type="bpmn:Pool" name="Pool">
+    <containLane name="Lane">
+      <graphicObj xsi:type="bpmn:SubProcess" name="Subprocess">
+        <children xsi:type="bpmn:BusinessRulesTask" name="SPBusinessRulesTask"/>
+      </graphicObj>
+      <graphicObj xsi:type="bpmn:BusinessRulesTask" name="BusinessRulesTask"/>
+      <graphicObj xsi:type="bpmn:StartEvent" name="">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNReference.1/@containLane.0/@graphicObj.1"/>
+      </graphicObj>
+    </containLane>
+  </BPMNReference>
+  <businessConceptEReference xsi:type="bpmn:BusinessGoal" name="Revenue Lift [Zara Inc.]"/>
+  <businessConceptEReference xsi:type="bpmn:BusinessProcessGoal" name="Effective [Clearance Pricing Decision]">
+    <contribTypeToParents xsi:type="bpmn:Make" name="make" targetBusinessConcept="//@businessConceptEReference.0"/>
+  </businessConceptEReference>
+  <businessConceptEReference xsi:type="bpmn:BusinessProcessGoal" name="Reliable [Clearance Pricing Decision]">
+    <contribTypeToParents xsi:type="bpmn:Make" name="make" targetBusinessConcept="//@businessConceptEReference.1"/>
+  </businessConceptEReference>
+  <businessConceptEReference xsi:type="bpmn:KPIGoal" name="Achieve(Forecast Hist Rate > 25% )">
+    <contribTypeToParents xsi:type="bpmn:Make" name="make" targetBusinessConcept="//@businessConceptEReference.2"/>
+  </businessConceptEReference>
+  <businessConceptEReference xsi:type="bpmn:UndesirableSituation" name="Low Hit Rate [Clearance Pricing Decision]" topic="//@BPMNReference.0">
+    <contribTypeToParents xsi:type="bpmn:Break" targetBusinessConcept="//@businessConceptEReference.3"/>
+  </businessConceptEReference>
+  <businessConceptEReference xsi:type="bpmn:KPI" name="Forecast Hit Rate" topic="//@BPMNReference.0"/>
+  <businessConceptEReference xsi:type="bpmn:BusinessProcessGoal" name="Timely [Clearance Pricing Decision]">
+    <contribTypeToParents xsi:type="bpmn:Make" name="make" targetBusinessConcept="//@businessConceptEReference.1"/>
+  </businessConceptEReference>
+  <businessConceptEReference xsi:type="bpmn:KPIGoal" name="Achieve(Processing Time &lt; 15 days)">
+    <contribTypeToParents xsi:type="bpmn:Make" name="make" targetBusinessConcept="//@businessConceptEReference.6"/>
+  </businessConceptEReference>
+  <businessConceptEReference xsi:type="bpmn:UndesirableSituation" name="Long Processing Time [Clearance Pricing Decision]" topic="//@BPMNReference.0">
+    <contribTypeToParents xsi:type="bpmn:Break" targetBusinessConcept="//@businessConceptEReference.7"/>
+  </businessConceptEReference>
+</bpmn:BPMNRootElement>

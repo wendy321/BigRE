@@ -1,0 +1,127 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BpmnPackage;
+import bpmn.DataAssociation;
+import bpmn.DataObject;
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Data Association</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.DataAssociationImpl#getDataAssociateObject <em>Data Associate Object</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class DataAssociationImpl extends ConnectingObjectImpl implements DataAssociation {
+	/**
+	 * The cached value of the '{@link #getDataAssociateObject() <em>Data Associate Object</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataAssociateObject()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DataObject> dataAssociateObject;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataAssociationImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.DATA_ASSOCIATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DataObject> getDataAssociateObject() {
+		if (dataAssociateObject == null) {
+			dataAssociateObject = new EObjectResolvingEList<DataObject>(DataObject.class, this, BpmnPackage.DATA_ASSOCIATION__DATA_ASSOCIATE_OBJECT);
+		}
+		return dataAssociateObject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.DATA_ASSOCIATION__DATA_ASSOCIATE_OBJECT:
+				return getDataAssociateObject();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.DATA_ASSOCIATION__DATA_ASSOCIATE_OBJECT:
+				getDataAssociateObject().clear();
+				getDataAssociateObject().addAll((Collection<? extends DataObject>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.DATA_ASSOCIATION__DATA_ASSOCIATE_OBJECT:
+				getDataAssociateObject().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.DATA_ASSOCIATION__DATA_ASSOCIATE_OBJECT:
+				return dataAssociateObject != null && !dataAssociateObject.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //DataAssociationImpl

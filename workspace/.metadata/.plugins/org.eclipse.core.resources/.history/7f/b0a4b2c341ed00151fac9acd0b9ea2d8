@@ -1,0 +1,17 @@
+/**
+ */
+package bpmn;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Claim Softgoal</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see bpmn.BpmnPackage#getClaimSoftgoal()
+ * @model
+ * @generated
+ */
+public interface ClaimSoftgoal extends SoftGoal {
+} // ClaimSoftgoal

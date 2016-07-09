@@ -1,0 +1,86 @@
+/**
+ */
+package bpmn;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>BPMN Root Element</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.BPMNRootElement#getName <em>Name</em>}</li>
+ *   <li>{@link bpmn.BPMNRootElement#getBPMNReference <em>BPMN Reference</em>}</li>
+ *   <li>{@link bpmn.BPMNRootElement#getBusinessConceptEReference <em>Business Concept EReference</em>}</li>
+ * </ul>
+ *
+ * @see bpmn.BpmnPackage#getBPMNRootElement()
+ * @model
+ * @generated
+ */
+public interface BPMNRootElement extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see bpmn.BpmnPackage#getBPMNRootElement_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link bpmn.BPMNRootElement#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>BPMN Reference</b></em>' containment reference list.
+	 * The list contents are of type {@link bpmn.GraphcialObject}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>BPMN Reference</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>BPMN Reference</em>' containment reference list.
+	 * @see bpmn.BpmnPackage#getBPMNRootElement_BPMNReference()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GraphcialObject> getBPMNReference();
+
+	/**
+	 * Returns the value of the '<em><b>Business Concept EReference</b></em>' containment reference list.
+	 * The list contents are of type {@link bpmn.BusinessConcepts}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Business Concept EReference</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Business Concept EReference</em>' containment reference list.
+	 * @see bpmn.BpmnPackage#getBPMNRootElement_BusinessConceptEReference()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BusinessConcepts> getBusinessConceptEReference();
+
+} // BPMNRootElement

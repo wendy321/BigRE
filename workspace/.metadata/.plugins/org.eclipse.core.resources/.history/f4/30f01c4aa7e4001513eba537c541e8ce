@@ -1,0 +1,347 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.Artifact;
+import bpmn.BpmnPackage;
+import bpmn.BusinessConcepts;
+import bpmn.GraphcialObject;
+import bpmn.KPI;
+import bpmn.SatisficingLabelType;
+import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Graphcial Object</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.GraphcialObjectImpl#getArtifact <em>Artifact</em>}</li>
+ *   <li>{@link bpmn.impl.GraphcialObjectImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link bpmn.impl.GraphcialObjectImpl#getKpi <em>Kpi</em>}</li>
+ *   <li>{@link bpmn.impl.GraphcialObjectImpl#getBusinessconceptsParent <em>Businessconcepts Parent</em>}</li>
+ *   <li>{@link bpmn.impl.GraphcialObjectImpl#getBusinessconcepts <em>Businessconcepts</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class GraphcialObjectImpl extends BusinessConceptsImpl implements GraphcialObject {
+	/**
+	 * The cached value of the '{@link #getArtifact() <em>Artifact</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArtifact()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Artifact> artifact;
+
+	/**
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final SatisficingLabelType LABEL_EDEFAULT = SatisficingLabelType.UNDECIDED;
+
+	/**
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected SatisficingLabelType label = LABEL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getKpi() <em>Kpi</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKpi()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<KPI> kpi;
+
+	/**
+	 * The cached value of the '{@link #getBusinessconceptsParent() <em>Businessconcepts Parent</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBusinessconceptsParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BusinessConcepts> businessconceptsParent;
+
+	/**
+	 * The cached value of the '{@link #getBusinessconcepts() <em>Businessconcepts</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBusinessconcepts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BusinessConcepts> businessconcepts;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GraphcialObjectImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.GRAPHCIAL_OBJECT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Artifact> getArtifact() {
+		if (artifact == null) {
+			artifact = new EObjectWithInverseResolvingEList.ManyInverse<Artifact>(Artifact.class, this, BpmnPackage.GRAPHCIAL_OBJECT__ARTIFACT, BpmnPackage.ARTIFACT__CONTRIB_TYPE_TO_PARENT);
+		}
+		return artifact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SatisficingLabelType getLabel() {
+		return label;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLabel(SatisficingLabelType newLabel) {
+		SatisficingLabelType oldLabel = label;
+		label = newLabel == null ? LABEL_EDEFAULT : newLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.GRAPHCIAL_OBJECT__LABEL, oldLabel, label));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<KPI> getKpi() {
+		if (kpi == null) {
+			kpi = new EObjectWithInverseResolvingEList.ManyInverse<KPI>(KPI.class, this, BpmnPackage.GRAPHCIAL_OBJECT__KPI, BpmnPackage.KPI__BUSINESS_PROCESS);
+		}
+		return kpi;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BusinessConcepts> getBusinessconceptsParent() {
+		if (businessconceptsParent == null) {
+			businessconceptsParent = new EObjectWithInverseResolvingEList.ManyInverse<BusinessConcepts>(BusinessConcepts.class, this, BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS_PARENT, BpmnPackage.BUSINESS_CONCEPTS__TOPIC_CHILD);
+		}
+		return businessconceptsParent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BusinessConcepts> getBusinessconcepts() {
+		if (businessconcepts == null) {
+			businessconcepts = new EObjectWithInverseResolvingEList.ManyInverse<BusinessConcepts>(BusinessConcepts.class, this, BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS, BpmnPackage.BUSINESS_CONCEPTS__TOPIC);
+		}
+		return businessconcepts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.GRAPHCIAL_OBJECT__ARTIFACT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getArtifact()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.GRAPHCIAL_OBJECT__KPI:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getKpi()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS_PARENT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBusinessconceptsParent()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBusinessconcepts()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.GRAPHCIAL_OBJECT__ARTIFACT:
+				return ((InternalEList<?>)getArtifact()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.GRAPHCIAL_OBJECT__KPI:
+				return ((InternalEList<?>)getKpi()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS_PARENT:
+				return ((InternalEList<?>)getBusinessconceptsParent()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS:
+				return ((InternalEList<?>)getBusinessconcepts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.GRAPHCIAL_OBJECT__ARTIFACT:
+				return getArtifact();
+			case BpmnPackage.GRAPHCIAL_OBJECT__LABEL:
+				return getLabel();
+			case BpmnPackage.GRAPHCIAL_OBJECT__KPI:
+				return getKpi();
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS_PARENT:
+				return getBusinessconceptsParent();
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS:
+				return getBusinessconcepts();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.GRAPHCIAL_OBJECT__ARTIFACT:
+				getArtifact().clear();
+				getArtifact().addAll((Collection<? extends Artifact>)newValue);
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__LABEL:
+				setLabel((SatisficingLabelType)newValue);
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__KPI:
+				getKpi().clear();
+				getKpi().addAll((Collection<? extends KPI>)newValue);
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS_PARENT:
+				getBusinessconceptsParent().clear();
+				getBusinessconceptsParent().addAll((Collection<? extends BusinessConcepts>)newValue);
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS:
+				getBusinessconcepts().clear();
+				getBusinessconcepts().addAll((Collection<? extends BusinessConcepts>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.GRAPHCIAL_OBJECT__ARTIFACT:
+				getArtifact().clear();
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__LABEL:
+				setLabel(LABEL_EDEFAULT);
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__KPI:
+				getKpi().clear();
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS_PARENT:
+				getBusinessconceptsParent().clear();
+				return;
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS:
+				getBusinessconcepts().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.GRAPHCIAL_OBJECT__ARTIFACT:
+				return artifact != null && !artifact.isEmpty();
+			case BpmnPackage.GRAPHCIAL_OBJECT__LABEL:
+				return label != LABEL_EDEFAULT;
+			case BpmnPackage.GRAPHCIAL_OBJECT__KPI:
+				return kpi != null && !kpi.isEmpty();
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS_PARENT:
+				return businessconceptsParent != null && !businessconceptsParent.isEmpty();
+			case BpmnPackage.GRAPHCIAL_OBJECT__BUSINESSCONCEPTS:
+				return businessconcepts != null && !businessconcepts.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (label: ");
+		result.append(label);
+		result.append(')');
+		return result.toString();
+	}
+
+} //GraphcialObjectImpl

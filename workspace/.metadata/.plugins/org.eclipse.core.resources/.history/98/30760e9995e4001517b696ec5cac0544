@@ -1,0 +1,89 @@
+/**
+ */
+package bpmn.tests;
+
+import bpmn.BpmnFactory;
+import bpmn.NewEClass77;
+
+import junit.framework.TestCase;
+
+import junit.textui.TestRunner;
+
+/**
+ * <!-- begin-user-doc -->
+ * A test case for the model object '<em><b>New EClass77</b></em>'.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class NewEClass77Test extends TestCase {
+
+	/**
+	 * The fixture for this New EClass77 test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewEClass77 fixture = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		TestRunner.run(NewEClass77Test.class);
+	}
+
+	/**
+	 * Constructs a new New EClass77 test case with the given name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NewEClass77Test(String name) {
+		super(name);
+	}
+
+	/**
+	 * Sets the fixture for this New EClass77 test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(NewEClass77 fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
+	 * Returns the fixture for this New EClass77 test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewEClass77 getFixture() {
+		return fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp() throws Exception {
+		setFixture(BpmnFactory.eINSTANCE.createNewEClass77());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown() throws Exception {
+		setFixture(null);
+	}
+
+} //NewEClass77Test

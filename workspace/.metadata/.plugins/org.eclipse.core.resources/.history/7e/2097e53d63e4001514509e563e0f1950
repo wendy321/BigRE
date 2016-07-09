@@ -1,0 +1,55 @@
+/**
+ */
+package bpmn.tests;
+
+import bpmn.Goal;
+
+import junit.framework.TestCase;
+
+/**
+ * <!-- begin-user-doc -->
+ * A test case for the model object '<em><b>Goal</b></em>'.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public abstract class GoalTest extends TestCase {
+
+	/**
+	 * The fixture for this Goal test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Goal fixture = null;
+
+	/**
+	 * Constructs a new Goal test case with the given name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GoalTest(String name) {
+		super(name);
+	}
+
+	/**
+	 * Sets the fixture for this Goal test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Goal fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
+	 * Returns the fixture for this Goal test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Goal getFixture() {
+		return fixture;
+	}
+
+} //GoalTest

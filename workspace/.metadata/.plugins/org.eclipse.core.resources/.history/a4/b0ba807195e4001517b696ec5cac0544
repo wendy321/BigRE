@@ -1,0 +1,187 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BpmnPackage;
+import bpmn.GraphcialObject;
+import bpmn.Lane;
+
+import bpmn.PhenomenonType;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Lane</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.LaneImpl#getObjecstRef <em>Objecst Ref</em>}</li>
+ *   <li>{@link bpmn.impl.LaneImpl#getPhenomenonRef <em>Phenomenon Ref</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class LaneImpl extends SwimlaneImpl implements Lane {
+	/**
+	 * The cached value of the '{@link #getObjecstRef() <em>Objecst Ref</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObjecstRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GraphcialObject> objecstRef;
+
+	/**
+	 * The cached value of the '{@link #getPhenomenonRef() <em>Phenomenon Ref</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhenomenonRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PhenomenonType> phenomenonRef;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LaneImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.LANE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<GraphcialObject> getObjecstRef() {
+		if (objecstRef == null) {
+			objecstRef = new EObjectContainmentEList<GraphcialObject>(GraphcialObject.class, this, BpmnPackage.LANE__OBJECST_REF);
+		}
+		return objecstRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PhenomenonType> getPhenomenonRef() {
+		if (phenomenonRef == null) {
+			phenomenonRef = new EObjectContainmentEList<PhenomenonType>(PhenomenonType.class, this, BpmnPackage.LANE__PHENOMENON_REF);
+		}
+		return phenomenonRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.LANE__OBJECST_REF:
+				return ((InternalEList<?>)getObjecstRef()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.LANE__PHENOMENON_REF:
+				return ((InternalEList<?>)getPhenomenonRef()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.LANE__OBJECST_REF:
+				return getObjecstRef();
+			case BpmnPackage.LANE__PHENOMENON_REF:
+				return getPhenomenonRef();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.LANE__OBJECST_REF:
+				getObjecstRef().clear();
+				getObjecstRef().addAll((Collection<? extends GraphcialObject>)newValue);
+				return;
+			case BpmnPackage.LANE__PHENOMENON_REF:
+				getPhenomenonRef().clear();
+				getPhenomenonRef().addAll((Collection<? extends PhenomenonType>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.LANE__OBJECST_REF:
+				getObjecstRef().clear();
+				return;
+			case BpmnPackage.LANE__PHENOMENON_REF:
+				getPhenomenonRef().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.LANE__OBJECST_REF:
+				return objecstRef != null && !objecstRef.isEmpty();
+			case BpmnPackage.LANE__PHENOMENON_REF:
+				return phenomenonRef != null && !phenomenonRef.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //LaneImpl

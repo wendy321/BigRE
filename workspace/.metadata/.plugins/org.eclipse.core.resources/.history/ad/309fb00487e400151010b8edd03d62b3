@@ -1,0 +1,104 @@
+/**
+ */
+package bpmn;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Contribution</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.Contribution#getName <em>Name</em>}</li>
+ *   <li>{@link bpmn.Contribution#getTargetGoal <em>Target Goal</em>}</li>
+ *   <li>{@link bpmn.Contribution#getTargetBusinessConcept <em>Target Business Concept</em>}</li>
+ * </ul>
+ *
+ * @see bpmn.BpmnPackage#getContribution()
+ * @model abstract="true"
+ * @generated
+ */
+public interface Contribution extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see bpmn.BpmnPackage#getContribution_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link bpmn.Contribution#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Target Goal</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Target Goal</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Target Goal</em>' reference.
+	 * @see #setTargetGoal(Goal)
+	 * @see bpmn.BpmnPackage#getContribution_TargetGoal()
+	 * @model
+	 * @generated
+	 */
+	Goal getTargetGoal();
+
+	/**
+	 * Sets the value of the '{@link bpmn.Contribution#getTargetGoal <em>Target Goal</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Target Goal</em>' reference.
+	 * @see #getTargetGoal()
+	 * @generated
+	 */
+	void setTargetGoal(Goal value);
+
+	/**
+	 * Returns the value of the '<em><b>Target Business Concept</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Target Business Concept</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Target Business Concept</em>' reference.
+	 * @see #setTargetBusinessConcept(BusinessConcepts)
+	 * @see bpmn.BpmnPackage#getContribution_TargetBusinessConcept()
+	 * @model
+	 * @generated
+	 */
+	BusinessConcepts getTargetBusinessConcept();
+
+	/**
+	 * Sets the value of the '{@link bpmn.Contribution#getTargetBusinessConcept <em>Target Business Concept</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Target Business Concept</em>' reference.
+	 * @see #getTargetBusinessConcept()
+	 * @generated
+	 */
+	void setTargetBusinessConcept(BusinessConcepts value);
+
+} // Contribution

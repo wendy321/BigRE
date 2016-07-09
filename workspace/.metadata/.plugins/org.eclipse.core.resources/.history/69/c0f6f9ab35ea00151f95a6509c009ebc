@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Funcextend
+Bundle-SymbolicName: bpmn.funcextend;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: bpmn.funcextend.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.sirius;bundle-version="2.0.4",
+ org.eclipse.emf.transaction;bundle-version="1.8.0",
+ org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.8.0",
+ org.eclipse.sirius.diagram;bundle-version="2.0.4",
+ org.eclipse.emf.examples.library;bundle-version="2.5.0",
+ bpmn;bundle-version="0.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

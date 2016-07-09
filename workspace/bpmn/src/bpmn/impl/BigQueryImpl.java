@@ -1,0 +1,206 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BigQuery;
+import bpmn.BpmnPackage;
+import bpmn.PhenomenonType;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Big Query</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.BigQueryImpl#getPhenomenontype <em>Phenomenontype</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class BigQueryImpl extends BusinessConceptsImpl implements BigQuery {
+	/**
+	 * The cached value of the '{@link #getPhenomenontype() <em>Phenomenontype</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhenomenontype()
+	 * @generated
+	 * @ordered
+	 */
+	protected PhenomenonType phenomenontype;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BigQueryImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.BIG_QUERY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PhenomenonType getPhenomenontype() {
+		if (phenomenontype != null && phenomenontype.eIsProxy()) {
+			InternalEObject oldPhenomenontype = (InternalEObject)phenomenontype;
+			phenomenontype = (PhenomenonType)eResolveProxy(oldPhenomenontype);
+			if (phenomenontype != oldPhenomenontype) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BpmnPackage.BIG_QUERY__PHENOMENONTYPE, oldPhenomenontype, phenomenontype));
+			}
+		}
+		return phenomenontype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PhenomenonType basicGetPhenomenontype() {
+		return phenomenontype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPhenomenontype(PhenomenonType newPhenomenontype, NotificationChain msgs) {
+		PhenomenonType oldPhenomenontype = phenomenontype;
+		phenomenontype = newPhenomenontype;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BpmnPackage.BIG_QUERY__PHENOMENONTYPE, oldPhenomenontype, newPhenomenontype);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPhenomenontype(PhenomenonType newPhenomenontype) {
+		if (newPhenomenontype != phenomenontype) {
+			NotificationChain msgs = null;
+			if (phenomenontype != null)
+				msgs = ((InternalEObject)phenomenontype).eInverseRemove(this, BpmnPackage.PHENOMENON_TYPE__BIGQUERY, PhenomenonType.class, msgs);
+			if (newPhenomenontype != null)
+				msgs = ((InternalEObject)newPhenomenontype).eInverseAdd(this, BpmnPackage.PHENOMENON_TYPE__BIGQUERY, PhenomenonType.class, msgs);
+			msgs = basicSetPhenomenontype(newPhenomenontype, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.BIG_QUERY__PHENOMENONTYPE, newPhenomenontype, newPhenomenontype));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.BIG_QUERY__PHENOMENONTYPE:
+				if (phenomenontype != null)
+					msgs = ((InternalEObject)phenomenontype).eInverseRemove(this, BpmnPackage.PHENOMENON_TYPE__BIGQUERY, PhenomenonType.class, msgs);
+				return basicSetPhenomenontype((PhenomenonType)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.BIG_QUERY__PHENOMENONTYPE:
+				return basicSetPhenomenontype(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.BIG_QUERY__PHENOMENONTYPE:
+				if (resolve) return getPhenomenontype();
+				return basicGetPhenomenontype();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.BIG_QUERY__PHENOMENONTYPE:
+				setPhenomenontype((PhenomenonType)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.BIG_QUERY__PHENOMENONTYPE:
+				setPhenomenontype((PhenomenonType)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.BIG_QUERY__PHENOMENONTYPE:
+				return phenomenontype != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //BigQueryImpl

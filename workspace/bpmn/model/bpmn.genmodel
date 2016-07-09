@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/bpmn/src" modelPluginID="bpmn" modelName="Bpmn"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" providerRootExtendsClass="" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>bpmn.ecore</foreignModel>
+  <genPackages prefix="Bpmn" disposableProviderFactory="true" ecorePackage="bpmn.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bpmn.ecore#//SatisficingLabelType">
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SatisficingLabelType/Undecided"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SatisficingLabelType/Satisficed"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SatisficingLabelType/WeaklySatisficed"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SatisficingLabelType/WeaklyDenied"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SatisficingLabelType/Denied"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SatisficingLabelType/Conflict"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bpmn.ecore#//SystemBoundaryType">
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SystemBoundaryType/Inside"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SystemBoundaryType/Outside"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SystemBoundaryType/Inbetween"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//SystemBoundaryType/Undecided"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bpmn.ecore#//ActivationType">
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//ActivationType/Active"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//ActivationType/Inactive"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//ActivationType/Undecided"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bpmn.ecore#//RelationshipType">
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//RelationshipType/Generalization"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//RelationshipType/Specialization"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//RelationshipType/Inclusion"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//RelationshipType/Extension"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//RelationshipType/Undecided"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//RelationshipType/Subsumption"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bpmn.ecore#//eventBasedGatewayType">
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//eventBasedGatewayType/Exclusive"/>
+      <genEnumLiterals ecoreEnumLiteral="bpmn.ecore#//eventBasedGatewayType/Parallel"/>
+    </genEnums>
+    <genClasses ecoreClass="bpmn.ecore#//ComplexGateway"/>
+    <genClasses ecoreClass="bpmn.ecore#//ReceiveTask"/>
+    <genClasses ecoreClass="bpmn.ecore#//ManualTask"/>
+    <genClasses ecoreClass="bpmn.ecore#//Gateway"/>
+    <genClasses ecoreClass="bpmn.ecore#//Pool">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//Pool/containLane"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//Event"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//Artifact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//Artifact/contribTypeToParent"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//NFRSoftsolution"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//Decomposition"/>
+    <genClasses ecoreClass="bpmn.ecore#//InclusiveGateway"/>
+    <genClasses ecoreClass="bpmn.ecore#//SomePlus"/>
+    <genClasses ecoreClass="bpmn.ecore#//ANDDecomposition"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//Activity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//Activity/boundaryEventRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//Swimlane"/>
+    <genClasses ecoreClass="bpmn.ecore#//ClaimSoftsolution"/>
+    <genClasses ecoreClass="bpmn.ecore#//ParallelGateway"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//Satisficing"/>
+    <genClasses ecoreClass="bpmn.ecore#//ExclusiveGateway"/>
+    <genClasses ecoreClass="bpmn.ecore#//DataObject"/>
+    <genClasses ecoreClass="bpmn.ecore#//Lane">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//Lane/graphicObj"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//FlowObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//FlowObject/sequenceFlows"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//SendTask"/>
+    <genClasses ecoreClass="bpmn.ecore#//Group"/>
+    <genClasses ecoreClass="bpmn.ecore#//OperationalizingSoftsolution"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//ThrowEvent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//ThrowEvent/throwEventDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//ThrowEvent/throwEventDefinitionRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//AbstractTask">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//AbstractTask/taskBoundaryEventRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//SomeMinus"/>
+    <genClasses ecoreClass="bpmn.ecore#//Help"/>
+    <genClasses ecoreClass="bpmn.ecore#//BusinessRulesTask"/>
+    <genClasses ecoreClass="bpmn.ecore#//Annotation"/>
+    <genClasses ecoreClass="bpmn.ecore#//Hurt"/>
+    <genClasses ecoreClass="bpmn.ecore#//SequenceFlow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//SequenceFlow/targetFlowObject"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//PositiveSatisficing"/>
+    <genClasses ecoreClass="bpmn.ecore#//EQLDecomposition"/>
+    <genClasses ecoreClass="bpmn.ecore#//Break"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//ConnectingObject"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//CatchEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//CatchEvent/parallelMultiple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//CatchEvent/catchEventDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//CatchEvent/catchEventDefinitionRef"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//BPMNRootElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//BPMNRootElement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//BPMNRootElement/BPMNReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//BPMNRootElement/businessConceptEReference"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//Make"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//NegativeSatisficing"/>
+    <genClasses ecoreClass="bpmn.ecore#//UserTask"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//GraphcialObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//GraphcialObject/artifact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//GraphcialObject/label"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//GraphcialObject/businessconceptsParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//GraphcialObject/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//GraphcialObject/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//GraphcialObject/localBusinessConcept"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//GraphcialObject/contribTypeToParents"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//SoftSolution"/>
+    <genClasses ecoreClass="bpmn.ecore#//ORDecomposition"/>
+    <genClasses ecoreClass="bpmn.ecore#//ServiceTask"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//Contribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//Contribution/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//Contribution/targetBusinessConcept"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//PhenomenonType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//PhenomenonType/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//PhenomenonType/label"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//PhenomenonType/bigquery"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//PhenomenonType/goal"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//SoftProblem"/>
+    <genClasses ecoreClass="bpmn.ecore#//UndesirableSituation"/>
+    <genClasses ecoreClass="bpmn.ecore#//UndesirableOperationalization"/>
+    <genClasses ecoreClass="bpmn.ecore#//CausalAttribution"/>
+    <genClasses ecoreClass="bpmn.ecore#//Task"/>
+    <genClasses ecoreClass="bpmn.ecore#//MessageFlow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//MessageFlow/messageFlowObject"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//SubProcess">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//SubProcess/children"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//SubProcess/isCollapsed"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//Message"/>
+    <genClasses ecoreClass="bpmn.ecore#//Timer"/>
+    <genClasses ecoreClass="bpmn.ecore#//Error"/>
+    <genClasses ecoreClass="bpmn.ecore#//Multiple"/>
+    <genClasses ecoreClass="bpmn.ecore#//StartEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//StartEvent/isInterrupt"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//BoundaryEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//BoundaryEvent/cancelActivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//BoundaryEvent/attachedToRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//EventDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//EventDefinition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//None"/>
+    <genClasses ecoreClass="bpmn.ecore#//EndEvent"/>
+    <genClasses ecoreClass="bpmn.ecore#//EvenbasedGateway">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//EvenbasedGateway/eventGatewayType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//EvenbasedGateway/isInstanciate"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//DataInput"/>
+    <genClasses ecoreClass="bpmn.ecore#//DataOutput"/>
+    <genClasses ecoreClass="bpmn.ecore#//IntermediateCatchEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//IntermediateCatchEvent/isInterrupt"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//IntermediateEndEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//IntermediateEndEvent/isInterrupt"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//DataAssociation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//DataAssociation/dataAssociateObject"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//BigQuery">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//BigQuery/phenomenontype"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//KPIGoal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//KPIGoal/kpi"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//KPI">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//KPI/kpigoal"/>
+    </genClasses>
+    <genClasses ecoreClass="bpmn.ecore#//BusinessGoal"/>
+    <genClasses ecoreClass="bpmn.ecore#//BusinessProcessGoal"/>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//Goal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//Goal/phenomenontype"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bpmn.ecore#//BusinessConcepts">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bpmn.ecore#//BusinessConcepts/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//BusinessConcepts/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//BusinessConcepts/child"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bpmn.ecore#//BusinessConcepts/contribTypeToParents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//BusinessConcepts/topicChild"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bpmn.ecore#//BusinessConcepts/topic"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

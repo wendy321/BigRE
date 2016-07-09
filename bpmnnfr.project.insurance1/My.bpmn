@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BPMNRootElement xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.example.org/bpmn" name="Subprocess">
+  <BPMNSwimReference xsi:type="bpmn:Pool" name="Quote Flow">
+    <containLane name="Agent and Prospect">
+      <objecstRef xsi:type="bpmn:SubProcess" name="Conduct Appointment" isCollapsed="false">
+        <children xsi:type="bpmn:StartEvent" name="">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" name="" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.1"/>
+        </children>
+        <children xsi:type="bpmn:Task" name="Review and Modify Lead" artifact="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.2">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" name="" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.3"/>
+        </children>
+        <children xsi:type="bpmn:DataInput" name="Lead Data" graphcialobject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.1"/>
+        <children xsi:type="bpmn:SubProcess" name="Collect Insured Person Data" isCollapsed="false">
+          <children xsi:type="bpmn:StartEvent">
+            <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.3/@children.1"/>
+          </children>
+          <children xsi:type="bpmn:ExclusiveGateway" name="">
+            <sequenceFlows xsi:type="bpmn:SequenceFlow" name="New Person" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.3/@children.2"/>
+            <sequenceFlows xsi:type="bpmn:SequenceFlow" name="Known Person" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.3/@children.4"/>
+          </children>
+          <children xsi:type="bpmn:Task" name="Add Person and Risk Coverage">
+            <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.3/@children.3"/>
+          </children>
+          <children xsi:type="bpmn:ExclusiveGateway" name="">
+            <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.3/@children.5"/>
+          </children>
+          <children xsi:type="bpmn:Task" name="Review and Modify Person and Risk Coverage">
+            <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.3/@children.3"/>
+          </children>
+          <children xsi:type="bpmn:EndEvent" name=""/>
+          <children xsi:type="bpmn:SequenceFlow" name="" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.4"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" name="" artifact="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.5"/>
+        <children xsi:type="bpmn:DataOutput" name="Quote Data" graphcialobject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0/@children.4"/>
+        <children xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.2"/>
+      </objecstRef>
+    </containLane>
+    <containLane name="Agent">
+      <objecstRef xsi:type="bpmn:StartEvent" name="" isInterrupt="true">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1"/>
+        <catchEventDefinition xsi:type="bpmn:Message"/>
+      </objecstRef>
+      <objecstRef xsi:type="bpmn:SubProcess" name="Prepare Appointment" isCollapsed="false">
+        <children xsi:type="bpmn:StartEvent">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.1"/>
+        </children>
+        <children xsi:type="bpmn:Task" name="Review Lead" artifact="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.2">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.3"/>
+        </children>
+        <children xsi:type="bpmn:DataInput" name="Lead Data" graphcialobject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.1"/>
+        <children xsi:type="bpmn:ExclusiveGateway" name="">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" name="Prepare Quote" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.4 //@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.5"/>
+        </children>
+        <children xsi:type="bpmn:Task" name="Prepare Quote ">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.5"/>
+        </children>
+        <children xsi:type="bpmn:ExclusiveGateway" name="">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.6"/>
+        </children>
+        <children xsi:type="bpmn:Task" name="Schdule Appointment">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.7 //@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.9"/>
+          <taskBoundaryEventRefs name="14d" catchEventDefinitionRef="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.6/@taskBoundaryEventRefs/@catchEventDefinition" cancelActivity="true">
+            <catchEventDefinition xsi:type="bpmn:Timer" name=""/>
+          </taskBoundaryEventRefs>
+        </children>
+        <children xsi:type="bpmn:ExclusiveGateway" name="">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" name="Appointment Scheduled" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.8"/>
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" name="Appointment Declined" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.1/@children.9"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" name="Appointment Scheduled">
+          <sequenceFlows xsi:type="bpmn:MessageFlow" name="Appointment Confirmation" messageFlowObject="//@BPMNSwimReference.1"/>
+          <throwEventDefinition xsi:type="bpmn:Message"/>
+        </children>
+        <children xsi:type="bpmn:EndEvent" name="Appointment Declined">
+          <throwEventDefinition xsi:type="bpmn:Error"/>
+        </children>
+        <children xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.0/@objecstRef.0"/>
+      </objecstRef>
+      <objecstRef xsi:type="bpmn:SubProcess" name="Collect Missing Information" phenomenonType="//@BPMNSwimReference.0/@containLane.1/@PhenomenonRef.0">
+        <children xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.3"/>
+        <children xsi:type="bpmn:MessageFlow" name="Request Missing Information" messageFlowObject="//@BPMNSwimReference.1"/>
+      </objecstRef>
+      <objecstRef xsi:type="bpmn:SubProcess" name="Calculate Insurance Package">
+        <children xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.0/@containLane.1/@objecstRef.4"/>
+      </objecstRef>
+      <objecstRef xsi:type="bpmn:EndEvent" name="">
+        <sequenceFlows xsi:type="bpmn:MessageFlow" name="Policy Request" messageFlowObject="//@BPMNSwimReference.2"/>
+        <throwEventDefinition xsi:type="bpmn:Message"/>
+      </objecstRef>
+      <PhenomenonRef xsi:type="bpmn:NFRSoftgoal" name="Speed" label="Satisficed" topic="//@BPMNSwimReference.0/@containLane.1/@objecstRef.2"/>
+      <PhenomenonRef xsi:type="bpmn:OperationalizingSoftgoal" name="Make a call by system" label="Denied">
+        <contribTypeToParent xsi:type="bpmn:Help" targetPhenomenonType="//@BPMNSwimReference.0/@containLane.1/@PhenomenonRef.0"/>
+      </PhenomenonRef>
+      <PhenomenonRef xsi:type="bpmn:OperationalizingSoftgoal" name="Send an email" label="Satisficed">
+        <contribTypeToParent xsi:type="bpmn:SomePlus" targetPhenomenonType="//@BPMNSwimReference.0/@containLane.1/@PhenomenonRef.0"/>
+      </PhenomenonRef>
+      <PhenomenonRef xsi:type="bpmn:OperationalizingSoftgoal" name="Chat lively" label="Satisficed">
+        <contribTypeToParent xsi:type="bpmn:Make" targetPhenomenonType="//@BPMNSwimReference.0/@containLane.1/@PhenomenonRef.0"/>
+      </PhenomenonRef>
+      <PhenomenonRef xsi:type="bpmn:OperationalizingSoftgoal" name="Send a mail" label="Denied">
+        <contribTypeToParent xsi:type="bpmn:Hurt" targetPhenomenonType="//@BPMNSwimReference.0/@containLane.1/@PhenomenonRef.0"/>
+      </PhenomenonRef>
+    </containLane>
+  </BPMNSwimReference>
+  <BPMNSwimReference xsi:type="bpmn:Pool" relatedObjects="//@BPMNSwimReference.0/@containLane.1/@objecstRef.2" name="Prospect">
+    <objectsRef xsi:type="bpmn:MessageFlow" relatedObjects="//@BPMNSwimReference.0/@containLane.1/@objecstRef.2" name="A Piece of Information"/>
+  </BPMNSwimReference>
+  <BPMNSwimReference xsi:type="bpmn:Pool" name="Insurance Company">
+    <objectsRef xsi:type="bpmn:MessageFlow" relatedObjects="//@BPMNSwimReference.0/@containLane.1/@objecstRef.0" name="Lead"/>
+  </BPMNSwimReference>
+  <BPMNSwimReference xsi:type="bpmn:Pool" name="Pool">
+    <containLane name="Lane">
+      <objecstRef xsi:type="bpmn:SubProcess" name="Subprocess">
+        <children xsi:type="bpmn:Task" name="Task"/>
+        <children xsi:type="bpmn:Task" name="Task">
+          <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.3/@containLane.0/@objecstRef.0/@children.2"/>
+        </children>
+        <children xsi:type="bpmn:UserTask" name="UserTask"/>
+        <children xsi:type="bpmn:ManualTask" name="ManualTask"/>
+      </objecstRef>
+      <objecstRef xsi:type="bpmn:ManualTask" name="ManualTask">
+        <sequenceFlows xsi:type="bpmn:SequenceFlow" targetFlowObject="//@BPMNSwimReference.3/@containLane.0/@objecstRef.3"/>
+      </objecstRef>
+      <objecstRef xsi:type="bpmn:Task"/>
+      <objecstRef xsi:type="bpmn:UserTask" name="UserTask"/>
+    </containLane>
+  </BPMNSwimReference>
+</bpmn:BPMNRootElement>

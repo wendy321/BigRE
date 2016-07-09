@@ -1,0 +1,39 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BpmnPackage;
+import bpmn.NewEClass77;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>New EClass77</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class NewEClass77Impl extends MinimalEObjectImpl.Container implements NewEClass77 {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NewEClass77Impl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.NEW_ECLASS77;
+	}
+
+} //NewEClass77Impl

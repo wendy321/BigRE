@@ -1,0 +1,570 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BigQuery;
+import bpmn.BpmnPackage;
+import bpmn.Contribution;
+import bpmn.Goal;
+import bpmn.GraphcialObject;
+import bpmn.PhenomenonType;
+import bpmn.SatisficingLabelType;
+import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Phenomenon Type</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getParents <em>Parents</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getChild <em>Child</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getContribTypeToParent <em>Contrib Type To Parent</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getTopic <em>Topic</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getTopicChild <em>Topic Child</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getBigquery <em>Bigquery</em>}</li>
+ *   <li>{@link bpmn.impl.PhenomenonTypeImpl#getGoal <em>Goal</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class PhenomenonTypeImpl extends MinimalEObjectImpl.Container implements PhenomenonType {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final SatisficingLabelType LABEL_EDEFAULT = SatisficingLabelType.UNDECIDED;
+
+	/**
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected SatisficingLabelType label = LABEL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getParents() <em>Parents</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PhenomenonType> parents;
+
+	/**
+	 * The cached value of the '{@link #getChild() <em>Child</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChild()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PhenomenonType> child;
+
+	/**
+	 * The cached value of the '{@link #getContribTypeToParent() <em>Contrib Type To Parent</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContribTypeToParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Contribution> contribTypeToParent;
+
+	/**
+	 * The cached value of the '{@link #getTopic() <em>Topic</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTopic()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GraphcialObject> topic;
+
+	/**
+	 * The cached value of the '{@link #getTopicChild() <em>Topic Child</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTopicChild()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GraphcialObject> topicChild;
+
+	/**
+	 * The cached value of the '{@link #getBigquery() <em>Bigquery</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBigquery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BigQuery> bigquery;
+
+	/**
+	 * The cached value of the '{@link #getGoal() <em>Goal</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGoal()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Goal> goal;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PhenomenonTypeImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.PHENOMENON_TYPE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PHENOMENON_TYPE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PHENOMENON_TYPE__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SatisficingLabelType getLabel() {
+		return label;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLabel(SatisficingLabelType newLabel) {
+		SatisficingLabelType oldLabel = label;
+		label = newLabel == null ? LABEL_EDEFAULT : newLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.PHENOMENON_TYPE__LABEL, oldLabel, label));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PhenomenonType> getParents() {
+		if (parents == null) {
+			parents = new EObjectWithInverseResolvingEList.ManyInverse<PhenomenonType>(PhenomenonType.class, this, BpmnPackage.PHENOMENON_TYPE__PARENTS, BpmnPackage.PHENOMENON_TYPE__CHILD);
+		}
+		return parents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PhenomenonType> getChild() {
+		if (child == null) {
+			child = new EObjectWithInverseResolvingEList.ManyInverse<PhenomenonType>(PhenomenonType.class, this, BpmnPackage.PHENOMENON_TYPE__CHILD, BpmnPackage.PHENOMENON_TYPE__PARENTS);
+		}
+		return child;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Contribution> getContribTypeToParent() {
+		if (contribTypeToParent == null) {
+			contribTypeToParent = new EObjectContainmentEList<Contribution>(Contribution.class, this, BpmnPackage.PHENOMENON_TYPE__CONTRIB_TYPE_TO_PARENT);
+		}
+		return contribTypeToParent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<GraphcialObject> getTopic() {
+		if (topic == null) {
+			topic = new EObjectWithInverseResolvingEList.ManyInverse<GraphcialObject>(GraphcialObject.class, this, BpmnPackage.PHENOMENON_TYPE__TOPIC, BpmnPackage.GRAPHCIAL_OBJECT__PHENOMENON_TYPE);
+		}
+		return topic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<GraphcialObject> getTopicChild() {
+		if (topicChild == null) {
+			topicChild = new EObjectWithInverseResolvingEList.ManyInverse<GraphcialObject>(GraphcialObject.class, this, BpmnPackage.PHENOMENON_TYPE__TOPIC_CHILD, BpmnPackage.GRAPHCIAL_OBJECT__PHENOMENON_TYPE_PARENT);
+		}
+		return topicChild;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BigQuery> getBigquery() {
+		if (bigquery == null) {
+			bigquery = new EObjectWithInverseResolvingEList<BigQuery>(BigQuery.class, this, BpmnPackage.PHENOMENON_TYPE__BIGQUERY, BpmnPackage.BIG_QUERY__PHENOMENONTYPE);
+		}
+		return bigquery;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Goal> getGoal() {
+		if (goal == null) {
+			goal = new EObjectWithInverseResolvingEList.ManyInverse<Goal>(Goal.class, this, BpmnPackage.PHENOMENON_TYPE__GOAL, BpmnPackage.GOAL__PHENOMENONTYPE);
+		}
+		return goal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.PHENOMENON_TYPE__PARENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParents()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__CHILD:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChild()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTopic()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC_CHILD:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTopicChild()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__BIGQUERY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBigquery()).basicAdd(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__GOAL:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGoal()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.PHENOMENON_TYPE__PARENTS:
+				return ((InternalEList<?>)getParents()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__CHILD:
+				return ((InternalEList<?>)getChild()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__CONTRIB_TYPE_TO_PARENT:
+				return ((InternalEList<?>)getContribTypeToParent()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC:
+				return ((InternalEList<?>)getTopic()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC_CHILD:
+				return ((InternalEList<?>)getTopicChild()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__BIGQUERY:
+				return ((InternalEList<?>)getBigquery()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.PHENOMENON_TYPE__GOAL:
+				return ((InternalEList<?>)getGoal()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.PHENOMENON_TYPE__NAME:
+				return getName();
+			case BpmnPackage.PHENOMENON_TYPE__TYPE:
+				return getType();
+			case BpmnPackage.PHENOMENON_TYPE__LABEL:
+				return getLabel();
+			case BpmnPackage.PHENOMENON_TYPE__PARENTS:
+				return getParents();
+			case BpmnPackage.PHENOMENON_TYPE__CHILD:
+				return getChild();
+			case BpmnPackage.PHENOMENON_TYPE__CONTRIB_TYPE_TO_PARENT:
+				return getContribTypeToParent();
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC:
+				return getTopic();
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC_CHILD:
+				return getTopicChild();
+			case BpmnPackage.PHENOMENON_TYPE__BIGQUERY:
+				return getBigquery();
+			case BpmnPackage.PHENOMENON_TYPE__GOAL:
+				return getGoal();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.PHENOMENON_TYPE__NAME:
+				setName((String)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__TYPE:
+				setType((String)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__LABEL:
+				setLabel((SatisficingLabelType)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__PARENTS:
+				getParents().clear();
+				getParents().addAll((Collection<? extends PhenomenonType>)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__CHILD:
+				getChild().clear();
+				getChild().addAll((Collection<? extends PhenomenonType>)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__CONTRIB_TYPE_TO_PARENT:
+				getContribTypeToParent().clear();
+				getContribTypeToParent().addAll((Collection<? extends Contribution>)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC:
+				getTopic().clear();
+				getTopic().addAll((Collection<? extends GraphcialObject>)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC_CHILD:
+				getTopicChild().clear();
+				getTopicChild().addAll((Collection<? extends GraphcialObject>)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__BIGQUERY:
+				getBigquery().clear();
+				getBigquery().addAll((Collection<? extends BigQuery>)newValue);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__GOAL:
+				getGoal().clear();
+				getGoal().addAll((Collection<? extends Goal>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.PHENOMENON_TYPE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__LABEL:
+				setLabel(LABEL_EDEFAULT);
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__PARENTS:
+				getParents().clear();
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__CHILD:
+				getChild().clear();
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__CONTRIB_TYPE_TO_PARENT:
+				getContribTypeToParent().clear();
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC:
+				getTopic().clear();
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC_CHILD:
+				getTopicChild().clear();
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__BIGQUERY:
+				getBigquery().clear();
+				return;
+			case BpmnPackage.PHENOMENON_TYPE__GOAL:
+				getGoal().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.PHENOMENON_TYPE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case BpmnPackage.PHENOMENON_TYPE__TYPE:
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+			case BpmnPackage.PHENOMENON_TYPE__LABEL:
+				return label != LABEL_EDEFAULT;
+			case BpmnPackage.PHENOMENON_TYPE__PARENTS:
+				return parents != null && !parents.isEmpty();
+			case BpmnPackage.PHENOMENON_TYPE__CHILD:
+				return child != null && !child.isEmpty();
+			case BpmnPackage.PHENOMENON_TYPE__CONTRIB_TYPE_TO_PARENT:
+				return contribTypeToParent != null && !contribTypeToParent.isEmpty();
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC:
+				return topic != null && !topic.isEmpty();
+			case BpmnPackage.PHENOMENON_TYPE__TOPIC_CHILD:
+				return topicChild != null && !topicChild.isEmpty();
+			case BpmnPackage.PHENOMENON_TYPE__BIGQUERY:
+				return bigquery != null && !bigquery.isEmpty();
+			case BpmnPackage.PHENOMENON_TYPE__GOAL:
+				return goal != null && !goal.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", Type: ");
+		result.append(type);
+		result.append(", label: ");
+		result.append(label);
+		result.append(')');
+		return result.toString();
+	}
+
+} //PhenomenonTypeImpl

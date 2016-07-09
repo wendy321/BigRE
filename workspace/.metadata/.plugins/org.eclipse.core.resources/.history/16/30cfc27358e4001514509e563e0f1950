@@ -1,0 +1,315 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.ActivationType;
+import bpmn.BpmnPackage;
+import bpmn.MappingObject;
+import bpmn.RelationshipType;
+import bpmn.SystemBoundaryType;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Mapping Object</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.MappingObjectImpl#getBoundary <em>Boundary</em>}</li>
+ *   <li>{@link bpmn.impl.MappingObjectImpl#getActivation <em>Activation</em>}</li>
+ *   <li>{@link bpmn.impl.MappingObjectImpl#getRelationship <em>Relationship</em>}</li>
+ *   <li>{@link bpmn.impl.MappingObjectImpl#getRelatedObjects <em>Related Objects</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class MappingObjectImpl extends MinimalEObjectImpl.Container implements MappingObject {
+	/**
+	 * The default value of the '{@link #getBoundary() <em>Boundary</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBoundary()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final SystemBoundaryType BOUNDARY_EDEFAULT = SystemBoundaryType.UNDECIDED;
+
+	/**
+	 * The cached value of the '{@link #getBoundary() <em>Boundary</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBoundary()
+	 * @generated
+	 * @ordered
+	 */
+	protected SystemBoundaryType boundary = BOUNDARY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getActivation() <em>Activation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ActivationType ACTIVATION_EDEFAULT = ActivationType.UNDECIDED;
+
+	/**
+	 * The cached value of the '{@link #getActivation() <em>Activation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivation()
+	 * @generated
+	 * @ordered
+	 */
+	protected ActivationType activation = ACTIVATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRelationship() <em>Relationship</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelationship()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final RelationshipType RELATIONSHIP_EDEFAULT = RelationshipType.UNDECIDED;
+
+	/**
+	 * The cached value of the '{@link #getRelationship() <em>Relationship</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelationship()
+	 * @generated
+	 * @ordered
+	 */
+	protected RelationshipType relationship = RELATIONSHIP_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRelatedObjects() <em>Related Objects</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelatedObjects()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MappingObject> relatedObjects;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MappingObjectImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.MAPPING_OBJECT;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemBoundaryType getBoundary() {
+		return boundary;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBoundary(SystemBoundaryType newBoundary) {
+		SystemBoundaryType oldBoundary = boundary;
+		boundary = newBoundary == null ? BOUNDARY_EDEFAULT : newBoundary;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MAPPING_OBJECT__BOUNDARY, oldBoundary, boundary));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActivationType getActivation() {
+		return activation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActivation(ActivationType newActivation) {
+		ActivationType oldActivation = activation;
+		activation = newActivation == null ? ACTIVATION_EDEFAULT : newActivation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MAPPING_OBJECT__ACTIVATION, oldActivation, activation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RelationshipType getRelationship() {
+		return relationship;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRelationship(RelationshipType newRelationship) {
+		RelationshipType oldRelationship = relationship;
+		relationship = newRelationship == null ? RELATIONSHIP_EDEFAULT : newRelationship;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BpmnPackage.MAPPING_OBJECT__RELATIONSHIP, oldRelationship, relationship));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<MappingObject> getRelatedObjects() {
+		if (relatedObjects == null) {
+			relatedObjects = new EObjectResolvingEList<MappingObject>(MappingObject.class, this, BpmnPackage.MAPPING_OBJECT__RELATED_OBJECTS);
+		}
+		return relatedObjects;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.MAPPING_OBJECT__BOUNDARY:
+				return getBoundary();
+			case BpmnPackage.MAPPING_OBJECT__ACTIVATION:
+				return getActivation();
+			case BpmnPackage.MAPPING_OBJECT__RELATIONSHIP:
+				return getRelationship();
+			case BpmnPackage.MAPPING_OBJECT__RELATED_OBJECTS:
+				return getRelatedObjects();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.MAPPING_OBJECT__BOUNDARY:
+				setBoundary((SystemBoundaryType)newValue);
+				return;
+			case BpmnPackage.MAPPING_OBJECT__ACTIVATION:
+				setActivation((ActivationType)newValue);
+				return;
+			case BpmnPackage.MAPPING_OBJECT__RELATIONSHIP:
+				setRelationship((RelationshipType)newValue);
+				return;
+			case BpmnPackage.MAPPING_OBJECT__RELATED_OBJECTS:
+				getRelatedObjects().clear();
+				getRelatedObjects().addAll((Collection<? extends MappingObject>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.MAPPING_OBJECT__BOUNDARY:
+				setBoundary(BOUNDARY_EDEFAULT);
+				return;
+			case BpmnPackage.MAPPING_OBJECT__ACTIVATION:
+				setActivation(ACTIVATION_EDEFAULT);
+				return;
+			case BpmnPackage.MAPPING_OBJECT__RELATIONSHIP:
+				setRelationship(RELATIONSHIP_EDEFAULT);
+				return;
+			case BpmnPackage.MAPPING_OBJECT__RELATED_OBJECTS:
+				getRelatedObjects().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.MAPPING_OBJECT__BOUNDARY:
+				return boundary != BOUNDARY_EDEFAULT;
+			case BpmnPackage.MAPPING_OBJECT__ACTIVATION:
+				return activation != ACTIVATION_EDEFAULT;
+			case BpmnPackage.MAPPING_OBJECT__RELATIONSHIP:
+				return relationship != RELATIONSHIP_EDEFAULT;
+			case BpmnPackage.MAPPING_OBJECT__RELATED_OBJECTS:
+				return relatedObjects != null && !relatedObjects.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (boundary: ");
+		result.append(boundary);
+		result.append(", activation: ");
+		result.append(activation);
+		result.append(", relationship: ");
+		result.append(relationship);
+		result.append(')');
+		return result.toString();
+	}
+
+} //MappingObjectImpl

@@ -1,0 +1,198 @@
+/**
+ */
+package bpmn.impl;
+
+import bpmn.BpmnPackage;
+import bpmn.Contribution;
+import bpmn.Goal;
+import bpmn.PhenomenonType;
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Goal</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link bpmn.impl.GoalImpl#getPhenomenontype <em>Phenomenontype</em>}</li>
+ *   <li>{@link bpmn.impl.GoalImpl#getContribTypeToParent <em>Contrib Type To Parent</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class GoalImpl extends BusinessConceptsImpl implements Goal {
+	/**
+	 * The cached value of the '{@link #getPhenomenontype() <em>Phenomenontype</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhenomenontype()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PhenomenonType> phenomenontype;
+
+	/**
+	 * The cached value of the '{@link #getContribTypeToParent() <em>Contrib Type To Parent</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContribTypeToParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Contribution> contribTypeToParent;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GoalImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BpmnPackage.Literals.GOAL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PhenomenonType> getPhenomenontype() {
+		if (phenomenontype == null) {
+			phenomenontype = new EObjectWithInverseResolvingEList.ManyInverse<PhenomenonType>(PhenomenonType.class, this, BpmnPackage.GOAL__PHENOMENONTYPE, BpmnPackage.PHENOMENON_TYPE__GOAL);
+		}
+		return phenomenontype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Contribution> getContribTypeToParent() {
+		if (contribTypeToParent == null) {
+			contribTypeToParent = new EObjectContainmentEList<Contribution>(Contribution.class, this, BpmnPackage.GOAL__CONTRIB_TYPE_TO_PARENT);
+		}
+		return contribTypeToParent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.GOAL__PHENOMENONTYPE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPhenomenontype()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BpmnPackage.GOAL__PHENOMENONTYPE:
+				return ((InternalEList<?>)getPhenomenontype()).basicRemove(otherEnd, msgs);
+			case BpmnPackage.GOAL__CONTRIB_TYPE_TO_PARENT:
+				return ((InternalEList<?>)getContribTypeToParent()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case BpmnPackage.GOAL__PHENOMENONTYPE:
+				return getPhenomenontype();
+			case BpmnPackage.GOAL__CONTRIB_TYPE_TO_PARENT:
+				return getContribTypeToParent();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case BpmnPackage.GOAL__PHENOMENONTYPE:
+				getPhenomenontype().clear();
+				getPhenomenontype().addAll((Collection<? extends PhenomenonType>)newValue);
+				return;
+			case BpmnPackage.GOAL__CONTRIB_TYPE_TO_PARENT:
+				getContribTypeToParent().clear();
+				getContribTypeToParent().addAll((Collection<? extends Contribution>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.GOAL__PHENOMENONTYPE:
+				getPhenomenontype().clear();
+				return;
+			case BpmnPackage.GOAL__CONTRIB_TYPE_TO_PARENT:
+				getContribTypeToParent().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case BpmnPackage.GOAL__PHENOMENONTYPE:
+				return phenomenontype != null && !phenomenontype.isEmpty();
+			case BpmnPackage.GOAL__CONTRIB_TYPE_TO_PARENT:
+				return contribTypeToParent != null && !contribTypeToParent.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //GoalImpl
